@@ -9,7 +9,6 @@ export default function Page() {
   const [uf, setUf] = useState('');
   const [cidade, setCidade] = useState('');
   const [bairro, setBairro] = useState('');
-  const [municipio, setMunicipio] = useState('');
   const [coordenadas, setCoordenadas] = useState<{ lat: number; lng: number } | null>(null);
 
   const limparCep = (input: string) => {
@@ -45,9 +44,10 @@ export default function Page() {
       }
 
       setCoordenadas({ lat: parseFloat(geoData[0].lat), lng: parseFloat(geoData[0].lon) });
-    } catch (err) {
-      alert('Erro ao buscar CEP.');
-    }
+    } catch {
+  alert('Erro ao buscar CEP.');
+}
+
   };
 
   const buscarCidadeMunicipio = async () => {
@@ -67,7 +67,7 @@ export default function Page() {
       }
 
       setCoordenadas({ lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) });
-    } catch (err) {
+    } catch {
       alert('Erro ao buscar cidade/UF.');
     }
   };
