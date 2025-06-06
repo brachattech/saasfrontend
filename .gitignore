@@ -1,0 +1,37 @@
+# dependências
+node_modules/
+.pnpm/
+.pnp/
+
+# build e cache
+.next/
+out/
+dist/
+.cache/
+turbo/
+
+# arquivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# arquivos do editor
+.vscode/
+.idea/
+
+# variáveis de ambiente
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+!.env.example
+
+# coverage de testes
+coverage/
+
